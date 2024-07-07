@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is the admin page</h1>
+    <x-app-layout>
+
+    </x-app-layout>
+    <h1>userpage after login</h1>
+
 </body>
 </html>
