@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+
+  <head>
+   @include('home.css');
+  </head>
+
 <body>
-<x-app-layout>
 
-</x-app-layout>
-<h1>userpage after login</h1>
+@include('home.header'); 
+@include('home.main_banner');
+@include('home.category');
+@include('home.book');
+@include('home.footer');
 
-</body>
+  </body>
 </html>
