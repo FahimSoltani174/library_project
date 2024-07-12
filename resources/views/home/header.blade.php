@@ -32,22 +32,19 @@
                        
                        
                         @if (Route::has('login'))
-                            <div class="sm:fixed sm:top-p sm:right-0 p-6 text-right z-10">
+                         
                                 @auth
-                                    <a
-                                        href="{{ url('/home') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
-                                    >
-                                        Dashboard
-                                    </a>
+                                <x-app-layout>
+                                    
+                                </x-app-layout>
                                 @else
-                                <li><a href="{{ route('login') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">Logout</a></li>
+                                <li><a href="{{ route('login') }}" class="rounded-md px-3 py-2 text-white ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">Login</a></li>
 
                                     @if (Route::has('register'))
-                                    <li><a href="{{ route('register') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">Register</a></li>
+                                    <li><a href="{{ route('register') }}" class="rounded-md px-3 py-2 text-white ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">Register</a></li>
                                     @endif
                                 @endauth
-</div>
+
                         @endif
                        
                         

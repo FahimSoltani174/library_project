@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <x-app-layout>
+<html>
+  <head> 
+    @include('admin.css')
+  </head>
+  <body>
+    <header class="header">   
+        @include('admin.header')
+    </header>
+    <div class="d-flex align-items-stretch">
+    
+        @include('admin.sidebar')
+        @include('admin.body')
+        @include('admin.footer')
+    </div>
 
-    </x-app-layout>
-    <h1>userpage after login</h1>
-
-</body>
+    <!-- JavaScript files-->
+    <script src="{{asset('admin/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('admin/vendor/popper.js/umd/popper.min.js')}}"></script>
+    <script src="{{asset('admin/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('admin/vendor/jquery.cookie/jquery.cookie.js')}}"></script>
+    <script src="{{asset('admin/vendor/chart.js/Chart.min.js')}}"></script>
+    <script src="{{asset('admin/vendor/jquery-validation/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('admin/js/charts-home.js')}}"></script>
+    <script src="{{asset('admin/js/front.js')}}"></script>
+  </body>
 </html>
