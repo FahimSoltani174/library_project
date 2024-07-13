@@ -25,7 +25,8 @@ class AdminController extends Controller
 
     public function category_page()
     {
-        return view('admin.category');
+        $data = Category::all();
+        return view('admin.category',compact('data'));
     }
 
     public function add_category(Request $request)
@@ -33,6 +34,14 @@ class AdminController extends Controller
         $data = new Category;
         $data->cat_title = $request->category;
         $data->save();
-        return redirect()->back();
+        return redirect()->back()->with('message','Category Added Successfully');
     }
+
+    public function cat_delete($id){
+        $data = Category::find($id);
+        $data->delete();
+        return redirect()->back()->with('message','Category Deleted successfully');
+    }
+
+
 }

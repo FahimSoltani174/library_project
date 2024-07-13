@@ -19,3 +19,4 @@ Route::middleware([
 route::get('/home', [AdminController::class, 'index']);
 route::get('/category_page', [AdminController::class, 'category_page']);
 route::post('/add_category', [AdminController::class, 'add_category']);
+route::get('/cat_delete/{id}', [AdminController::class, 'cat_delete']);
