@@ -83,8 +83,11 @@
                                 @foreach ($data as $data)
                                     <tr>
                                         <td>{{$data->cat_title}}</td>
-                                        <td><a onclick="confirmation(event)" href="{{url('cat_delete', $data->id)}}"
-                                                class="btn btn-danger">Delete</a></td>
+                                        <td>
+                                            <a href="{{url('edit_category',$data->id)}}" class="btn btn-info">Update</a>
+                                            <a onclick="confirmation(event)" href="{{url('cat_delete', $data->id)}}"
+                                                class="btn btn-danger">Delete</a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </table>
